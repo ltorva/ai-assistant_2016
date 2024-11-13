@@ -65,7 +65,7 @@ project-root/
 
 ### 2.2 后端目录说明
 - api/: 接口路由
-- services/: AI服务集成
+- services/: AI服���集成
 - main.py: 应用入口
 
 ### 2.3 核心依赖
