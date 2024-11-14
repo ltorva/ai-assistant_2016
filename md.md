@@ -25,24 +25,31 @@
 
 project-root/
 ├── client/                          # 前端项目目录
-│   ├── package.json                # npm 配置文件
-│   ├── tsconfig.json              # TypeScript 配置
+│   ├── public/                     # 公共资源目录
+│   │   ├── index.html             # HTML入口文件
+│   │   ├── manifest.json          # PWA配置文件
+│   │   ├── favicon.ico            # 网站图标
+│   │   ├── logo192.png           # 小尺寸logo
+│   │   └── logo512.png           # 大尺寸logo
+│   ├── package.json               # npm 配置文件
+│   ├── package-lock.json         # npm 依赖锁定文件
+│   ├── tsconfig.json             # TypeScript 配置
 │   ├── src/
-│   │   ├── components/             # React组件
-│   │   │   ├── Chat/              # 对话组件
-│   │   │   │   ├── ChatInput.tsx     # 输入框
-│   │   │   │   ├── ChatMessage.tsx   # 消息气泡
-│   │   │   │   └── ChatWindow.tsx    # 对话窗口
-│   │   │   └── Common/            # 通用组件
-│   │   │       └── Loading.tsx       # 加载状态
-│   │   ├── services/              # API服务
-│   │   │   └── api.ts              # API封装
-│   │   ├── styles/                # 样式文件
-│   │   │   └── index.css           # 全局样式
-│   │   ├── types/                 # 类型定义文件
-│   │   │   └── chat.d.ts           # 聊天相关类型
-│   │   ├── App.tsx                # 应用入口
-│   │   └── index.tsx              # 项目入口
+│   │   ├── components/            # React组件
+│   │   │   ├── Chat/             # 对话组件
+│   │   │   │   ├── ChatInput.tsx    # 输入框
+│   │   │   │   ├── ChatMessage.tsx  # 消息气泡
+│   │   │   │   └── ChatWindow.tsx   # 对话窗口
+│   │   │   └── Common/           # 通用组件
+│   │   │       └── Loading.tsx      # 加载状态
+│   │   ├── services/             # API服务
+│   │   │   └── api.ts             # API封装
+│   │   ├── styles/               # 样式文件
+│   │   │   └── index.css          # 全局样式
+│   │   ├── types/                # 类型定义文件
+│   │   │   └── chat.d.ts          # 聊天相关类型
+│   │   ├── App.tsx               # 应用入口
+│   │   └── index.tsx             # 项目入口
 │
 ├── server/                        # 后端项目目录
 │   ├── app/
@@ -53,6 +60,7 @@ project-root/
 │   │   │   ├── __init__.py
 │   │   │   └── ai_service.py     # AI服务
 │   │   └── main.py              # 应用入口
+│   ├── .env.example             # 环境变量示例
 │   └── requirements.txt         # Python依赖
 │
 ├── .gitignore                    # Git忽略文件
@@ -65,7 +73,7 @@ project-root/
 
 ### 2.2 后端目录说明
 - api/: 接口路由
-- services/: AI服���集成
+- services/: AI服集成
 - main.py: 应用入口
 
 ### 2.3 核心依赖

@@ -1,24 +1,27 @@
-// 导入 React 核心库
+// 导入React核心库和新的客户端渲染方法
 import React from 'react';
+import { createRoot } from 'react-dom/client';
 
-// 导入 ReactDOM，用于将 React 组件渲染到 DOM
-import ReactDOM from 'react-dom';
-
-// 导入根组件 App
+// 导入根组件
 import App from './App';
 
-// 导入 Ant Design 的样式文件
-import 'antd/dist/antd.css';
-
-// 导入自定义样式文件
+// 导入全局样式
 import './styles/index.css';
 
-// 使用 ReactDOM.render 将 App 组件渲染到 DOM
-// React.StrictMode 是一个开发模式的包装器，用于突出显示应用程序中的潜在问题
-ReactDOM.render(
+// 获取根DOM节点
+const container = document.getElementById('root');
+
+// 确保container存在
+if (!container) {
+  throw new Error('Failed to find the root element');
+}
+
+// 创建React根实例
+const root = createRoot(container);
+
+// 渲染应用
+root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  // 将组件挂载到 id 为 'root' 的 DOM 元素
-  document.getElementById('root')
+  </React.StrictMode>
 ); 
